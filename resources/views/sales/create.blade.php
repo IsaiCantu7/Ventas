@@ -19,7 +19,7 @@
                             <select name="name_product" id="name_product" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500">
                                 <option value="">Seleccionar Producto</option>
                                 @foreach ($products as $product)
-                                <option value="{{ $product->name }}" data-category="{{ $product->category->name }}" data-sale-price="{{ $product->sale_price }}">{{ $product->name }}</option>
+                                <option value="{{ $product->name }}" data-category="{{ $product->category->name ?? '' }}" data-sale-price="{{ $product->sale_price }}">{{ $product->name }}</option>
                                 @endforeach
                             </select>
                         </div>

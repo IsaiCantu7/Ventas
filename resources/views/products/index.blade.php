@@ -58,7 +58,7 @@
                                             <td class="px-6 py-4 whitespace-nowrap">{{ $product->description_short }}</td>
                                             <td class="px-6 py-4 whitespace-nowrap">{{ $product->description_large }}</td>
                                             <td class="px-6 py-4 whitespace-nowrap">{{ $product->colors }}</td>
-                                            <td class="px-6 py-4 whitespace-nowrap">{{ $product->category->name }}</td>
+                                            <td class="px-6 py-4 whitespace-nowrap">{{ $product->category->name ?? '' }}</td>
                                             <td class="px-6 py-4 whitespace-nowrap">{{$product->purchase_price}}</td>
                                             <td class="px-6 py-4 whitespace-nowrap">{{$product->sale_price}}</td>
                                             <td class="px-6 py-4 whitespace-nowrap">{{$product->motivo}}</td>
