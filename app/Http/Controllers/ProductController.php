@@ -73,7 +73,7 @@ public function index() : View
                 'purchase_price' => $request->purchase_price,
                 'sale_price' => $request->sale_price,
                 'motivo' => $request->motivo,
-                'quantity' => $request->quantity, // Agregar esta línea
+                'quantity' => $request->quantity,
             ]);
             
 
@@ -154,7 +154,7 @@ public function index() : View
             'category_id' => 'required|integer|exists:categories,id',
         ]);
 
-        // Check if any of the numeric fields have negative values
+        // Comprobar si alguno de los campos  tiene valores negativos.
         if ($request->purchase_price < 0 || $request->sale_price < 0 || $request->quantity < 0) {
             return back()->withErrors(['error' => 'Los campos numéricos no pueden tener valores negativos.'])->withInput();
         }
